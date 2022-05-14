@@ -1,0 +1,17 @@
+body {
+    margin: 0px; 
+    padding: 0px;
+    font-family: Arial;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+    color: salmon;
+}
+
+a:checked {
+
+    text-decoration: none;
+    color: salmon;
+}
