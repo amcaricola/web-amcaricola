@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/body.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/section.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    
+</head>
+
+<body>
+
+<!-- aqui va el header de la pagina - DEBO AGREGAR UN NAV BAR -->
+    <header>
+        <h1>Anthony Caricola </h1>
+        <p>Desarrollador Web</p>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./pokemonApi.html">Pokedex</a>
+        </nav>
+    </header>
+
+
+<!-- aqui va la seccion interna del body, el cuerpo de la pagina  -->
+<section>
+
+    <div>
+        <h3>Definicio:</h3>
+        <p>En esta seccion estara una especie de "pokedex" </p>
+        <p>Esta mostrara el trabajo y practica que se ha hace con APIs</p>
+        <p>La API usada es: <a href="https://pokeapi.co/">https://pokeapi.co/</a>  </p>
+    </div>
+</section>
+    
+<section class="pokemonSection">
+
+    <article>
+        <h3>Cual pokemon deseas ver?</h3>
+        <form action="">
+            <label for="pokemonIDname">Escribe el nombre del pokemon que deseas buscar: </label>
+            <input type="text" id="pokemonIDname">
+
+            <button type="button" id="pokemonButton">Activar Pokedex!</button>
+
+        </form>
+        <div class="pokemonImgDiv">
+            <img id="pokemonImg" class="pokemonImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png" alt="imagen del pokemon">
+        </div>
+        <div>
+            <h2>Detalles</h2>
+            <div class="pokemonDiv">
+                <h4>Nombre:</h4> <p id="pokemonName">Aun no recibido</p>
+            </div>
+            <div class="pokemonDiv">
+                <h4>ID pokedex:</h4> <p id="pokemonId">Aun no recibido</p>
+            </div>
+            <div class="pokemonDiv">
+                <h4>Alto:</h4> <p id="pokemonHeight">Aun no recibido</p>
+            </div>
+            <div class="pokemonDiv">
+                <h4>Peso:</h4> <p id="pokemonWeight">Aun no recibido</p>
+            </div>
+            <div class="pokemonDiv">
+                <h4>Tipo:</h4> 
+                <p id="pokemonTipe1">Aun no recibido</p> 
+                <p id="pokemonTipe2"> </p>
+            </div>
+            <h2>Stats</h2>
+
+            <table class="pokemonTabla">
+                <tr>
+                    <th>HP </th>
+                    <td id="pokemonHP">no asignado</td>
+                </tr>
+                <tr>
+                    <th>Ataque </th>
+                    <td id="pokemonAtk">no asignado</td>
+                </tr>
+                <tr>
+                    <th>Defensa </th>
+                    <td id="pokemonDef">no asignado</td>
+                </tr>
+                <tr>
+                    <th>Ataque especial </th>
+                    <td id="pokemonSAtk">no asignado</td>
+                </tr>
+                <tr>
+                    <th>Defensa especial </th>
+                    <td id="pokemonSDef">no asignado</td>
+                </tr>
+                <tr>
+                    <th>Velocidad </th>
+                    <td id="pokemonSpeed">no asignado</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </article>
+
+</section>
+
+    
+<!-- aqui va el footer de la pagina      -->
+<footer>
+    <div>
+        <ul>
+            <h4>Mas informacion:</h4>
+            <li>Anthony Caricola (Amcaricola)</li>
+            <li>Chile, Santiago de Chile</li>
+            <li>Contacto@amcaricola.com</li>
+        </ul>
+    </div>
+
+    <div>
+        <h4>Desarrollo actual de la Pagina:</h4>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+
+<!-- Aqui van los JS de la pagina -->
+<script type="module" src="./js/checkApi.js"></script>
+<script type="module" src="./js/pokeApi.js" ></script>
+
+</html>
