@@ -6,7 +6,7 @@ footer {
     display: flex;
     justify-content: center;
     background-color: salmon;
-    height: 150px;
+    height: 100%;
 
 
 }
@@ -14,4 +14,17 @@ footer {
 
 footer div {
     margin: 0px 55px ;
+}
+
+@media (max-width:450px) {
+   footer{
+       display: block;
+   }
+
+   footer div {
+       margin: 25px 25px;
+   }
+
+
+
 }

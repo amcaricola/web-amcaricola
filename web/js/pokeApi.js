@@ -29,7 +29,7 @@ buttonPokemon.onclick = () => {
     let pokemonName = document.getElementById("pokemonIDname");
     let name = pokemonName.value || "pikachu";
     let api_url =  "https://pokeapi.co/api/v2/pokemon/"
-    let fullUrl = api_url + name +"/"
+    let fullUrl = api_url + name.toLowerCase() +"/"
 
 
     check(fullUrl)
