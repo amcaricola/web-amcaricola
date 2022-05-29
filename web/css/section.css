@@ -20,45 +20,11 @@ article {
 form {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 form input{
     margin-bottom: 15px;
 }
 
-/* CSS especifico de la pagina POKEDEX */
-
-.pokemonSection{
-    display: grid;
-    justify-content: center;
-}
-
-.pokemonImgDiv{
-    text-align: center;
-
-}
-
-.pokemonImg{
-    height: 250px;
-    width: auto;
-    margin: 35px 0 ;
-    
-}
-
-.pokemonDiv {
-    display: flex;
-    align-items: center;
-    height: 35px;
-
-}
-
-.pokemonDiv h4, .pokemonDiv p {
-    margin-right: 15px;
-
-}
-
-.pokemonTabla{
-    width: 100%;
-    border: 1px solid black;
-}
 

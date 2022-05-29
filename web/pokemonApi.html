@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/section.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/pokemonApi.css">
     
 </head>
 
@@ -43,7 +44,10 @@
         <h3>Cual pokemon deseas ver?</h3>
         <form action="">
             <label for="pokemonIDname">Escribe el nombre del pokemon que deseas buscar: </label>
-            <input type="text" id="pokemonIDname">
+            <input type="text" id="pokemonIDname" autocomplete="off">
+            <ul id="resultadoBusqueda" class="autocompletar">
+            </ul>
+
 
             <button type="button" id="pokemonButton">Activar Pokedex!</button>
 

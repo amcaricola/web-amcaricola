@@ -1,0 +1,64 @@
+/* Section */
+
+.pokemonSection{
+    display: grid;
+    justify-content: center;
+}
+
+.pokemonImgDiv{
+    text-align: center;
+
+}
+
+.pokemonImg{
+    height: 250px;
+    width: auto;
+    margin: 35px 0 ;
+    
+}
+
+.pokemonDiv {
+    display: flex;
+    align-items: center;
+    height: 35px;
+
+}
+
+.pokemonDiv h4, .pokemonDiv p {
+    margin-right: 15px;
+
+}
+
+.pokemonTabla{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.autocompletar{
+    position:absolute;
+    z-index: 99;
+    text-align: center;
+    width: 100%;
+    left: -40px;
+    top: 25px;
+
+}
+
+.autocompletar li {
+    display: block;
+    background-color: whitesmoke;
+    border: 1px solid grey;
+    padding: 6px 0;
+    list-style: none;
+s
+
+}
+
+@media (max-width:450px) {
+
+    .autocompletar{
+        top: 45px;
+    
+    }
+ 
+ }
