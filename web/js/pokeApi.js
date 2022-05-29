@@ -56,7 +56,7 @@ pokemonName.addEventListener("keyup", (e)=> {
         if (pokemonName.value === resultadosNombres[i]){
             return
         }
-        pokemonResultado.innerHTML += `<li><a>${resultadosNombres[i]}</a></li>`
+        pokemonResultado.innerHTML += `<li>${resultadosNombres[i]}</li>`
     };
 })
 
