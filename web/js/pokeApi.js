@@ -5,6 +5,8 @@ let check = checkApi;
 
 // Definicion de variables del Dom utilizadas
 
+const buttonPokemon =  document.getElementById("pokemonButton")
+
 const imagenpk = document.getElementById("pokemonImg")
 const nombre =  document.getElementById("pokemonName")
 const id =  document.getElementById("pokemonId")
@@ -23,7 +25,8 @@ const pokeSpeed = document.getElementById("pokemonSpeed")
 let pokemonName = document.getElementById("pokemonIDname");
 
 let pokemonsNamesArray = [];
-    check("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
+
+check("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
     .then(data => {
         data.results.forEach(item => 
             pokemonsNamesArray.push(item.name)
@@ -65,25 +68,28 @@ pokemonName.addEventListener("keyup", (e)=> {
 pokemonResultado.addEventListener("click", (e) => {
     pokemonName.value = e.target.innerHTML
     pokemonResultado.innerHTML = ""
+    buscarPokemon();
 })
 
 
-// Definicion de Botton y de su accion.
+// Funcion Buscadora
 
-const buttonPokemon =  document.getElementById("pokemonButton")
+const buscarPokemon = () => {
 
-buttonPokemon.onclick = () => {
     
     let name = pokemonName.value || "pikachu";
     let api_url =  "https://pokeapi.co/api/v2/pokemon/"
     let fullUrl = api_url + name.toLowerCase() +"/"
-
-
+    
+    imagenpk.src = "../img/loading_pokemon.gif"
+    
     check(fullUrl)
-        .then(data => {
-            
-
-
+    .then(data => {
+        
+        
+            let imgPk = data.sprites.other["official-artwork"].front_default
+            imagenpk.src = imgPk 
+        
             nombre.innerText = data.name
             id.innerText = data.id
             alto.innerText = `${parseFloat(data.height) / 10} m`
@@ -107,12 +113,16 @@ buttonPokemon.onclick = () => {
             pokeSDef.innerText = statsbase[4]
             pokeSpeed.innerText = statsbase[5]
 
-            let imgPk = data.sprites.other["official-artwork"].front_default
-
-            imagenpk.src = imgPk 
 
 
         })
         .catch(err => err)
+
+}
+
+ // ejecucion de la funcion buscadora en el boton
+
+buttonPokemon.onclick = () => {
+  buscarPokemon();
 }
 
