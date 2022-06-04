@@ -7,20 +7,21 @@
 
 .pokemonImgDiv{
     text-align: center;
+    height: 300px;
 
 }
 
 .pokemonImg{
-    height: 250px;
-    width: auto;
+    height: auto;
+    width: 100%;
     margin: 35px 0 ;
     display:inline;
     
 }
 
 .pokemonImg-placeholder{
-    height: 250px;
-    width: auto;
+    height: auto;
+    width: 100%;
     margin: 35px 0 ;
     display: none;
 }
@@ -30,6 +31,9 @@
     align-items: center;
     height: 35px;
 
+}
+.pokemonSection label {
+    margin: 15px 0;
 }
 
 .pokemonDiv h4, .pokemonDiv p {
