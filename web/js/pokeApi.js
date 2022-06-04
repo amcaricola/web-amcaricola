@@ -8,6 +8,7 @@ let check = checkApi;
 const buttonPokemon =  document.getElementById("pokemonButton")
 
 const imagenpk = document.getElementById("pokemonImg")
+const imagenpkHolder = document.getElementById("pokemonImg-placeholder")
 const nombre =  document.getElementById("pokemonName")
 const id =  document.getElementById("pokemonId")
 const alto = document.getElementById("pokemonHeight")
@@ -81,7 +82,8 @@ const buscarPokemon = () => {
     let api_url =  "https://pokeapi.co/api/v2/pokemon/"
     let fullUrl = api_url + name.toLowerCase() +"/"
     
-    imagenpk.src = "../img/loading_pokemon.gif"
+    imagenpk.style.display = "none";
+    imagenpkHolder.style.display = "inline";
     
     check(fullUrl)
     .then(data => {
@@ -113,11 +115,12 @@ const buscarPokemon = () => {
             pokeSDef.innerText = statsbase[4]
             pokeSpeed.innerText = statsbase[5]
 
-
-
+            imagenpkHolder.style.display = "none";
+            imagenpk.style.display = "inline";
+            
         })
         .catch(err => err)
-
+        
 }
 
  // ejecucion de la funcion buscadora en el boton

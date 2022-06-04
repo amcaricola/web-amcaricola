@@ -14,7 +14,15 @@
     height: 250px;
     width: auto;
     margin: 35px 0 ;
+    display:inline;
     
+}
+
+.pokemonImg-placeholder{
+    height: 250px;
+    width: auto;
+    margin: 35px 0 ;
+    display: none;
 }
 
 .pokemonDiv {
