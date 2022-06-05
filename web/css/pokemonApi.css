@@ -54,7 +54,7 @@
     text-align: center;
     width: 100%;
     left: -40px;
-    top: 25px;
+    top: 55px;
 
 }
 
@@ -72,7 +72,7 @@
 @media (max-width:450px) {
 
     .autocompletar{
-        top: 45px;
+        top: 75px;
     
     }
  

@@ -5,7 +5,7 @@ body {
 }
 
 a {
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     color: salmon;
 }
@@ -14,4 +14,8 @@ a:checked {
 
     text-decoration: none;
     color: salmon;
+}
+
+p {
+    text-align: justify;
 }
