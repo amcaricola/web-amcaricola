@@ -18,35 +18,30 @@ let $contactoNav;
 
 
 // Carga inicial de la pagina  
-
-//CARGA DEL HEADER
-checkApi("../header.html")
-.then(data =>  {
-    objetoWeb.header = data
-    $header.innerHTML = objetoWeb.header
-    $sobreMiNav = document.querySelector("#sobreMiNav")
-    $proyectoNav = document.querySelector("#proyectoNav")
-    $contactoNav = document.querySelector("#contactoNav")
-
-    $proyectoNav.style["font-weight"] = "bold"
-
-    return checkApi("../b-Proyectos.html")
-}) 
-
-
-        //CARGA LA PRIMERA VISTA - PROYECTOS
-.then(data =>{
-    objetoWeb.proyectos = data
-    $section.innerHTML =   objetoWeb.proyectos
-    return checkApi("../footer.html")  
-} )
-
-
-        //CARGA DEL FOOTER
-.then(data =>  {
-    objetoWeb.footer = data
-    $footer.innerHTML = objetoWeb.footer
-})  
+async function webLoader (){
+    try{
+        objetoWeb.header = await checkApi("../header.html")
+        .then(data => {return data})
+        objetoWeb.proyectos = await checkApi("../b-Proyectos.html")
+        .then(data => {return data})
+        objetoWeb.footer = await checkApi("../footer.html") 
+        .then(data => {return data})
+            
+        $header.innerHTML = objetoWeb.header
+        $section.innerHTML =   objetoWeb.proyectos
+        $footer.innerHTML = objetoWeb.footer
+    
+        $sobreMiNav = document.querySelector("#sobreMiNav")
+        $proyectoNav = document.querySelector("#proyectoNav")
+        $contactoNav = document.querySelector("#contactoNav")
+    
+        $proyectoNav.style["font-weight"] = "bold"
+        
+    }catch (err){ console.log("hubo un error cargando la pagina!3")}
+    
+    }
+    
+    webLoader()
 
 
 
