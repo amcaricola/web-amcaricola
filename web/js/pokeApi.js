@@ -1,33 +1,77 @@
 import {checkApi} from './checkApi.js';
+import {doc,cambioBodyHtml} from './index.js';
+import {objetoWeb} from "./objetoWeb.js"
 
 let check = checkApi;
 
+// // Declaracion e variables del Dom utilizadas
+let pokemonName;
+let imagenpk ;
+let imagenpkHolder;
+let nombre ;
+let id ;
+let alto ;
+let peso ;
+let tipo1 ;
+let tipo2 ;
+let pokeHp;
+let pokeAtk ;
+let pokeDef ;
+let PokeSAtk ;
+let pokeSDef ;
+let pokeSpeed ;
 
-// Definicion de variables del Dom utilizadas
+//ejecucion del boton 
 
-const buttonPokemon =  document.getElementById("pokemonButton")
+doc.addEventListener("click", (e) => {
 
-const imagenpk = document.getElementById("pokemonImg")
-const imagenpkHolder = document.getElementById("pokemonImg-placeholder")
-const nombre =  document.getElementById("pokemonName")
-const id =  document.getElementById("pokemonId")
-const alto = document.getElementById("pokemonHeight")
-const peso =  document.getElementById("pokemonWeight")
-const tipo1 = document.getElementById("pokemonTipe1")
-const tipo2 = document.getElementById("pokemonTipe2")
-const pokeHp = document.getElementById("pokemonHP")
-const pokeAtk = document.getElementById("pokemonAtk")
-const pokeDef = document.getElementById("pokemonDef")
-const PokeSAtk = document.getElementById("pokemonSAtk")
-const pokeSDef = document.getElementById("pokemonSDef")
-const pokeSpeed = document.getElementById("pokemonSpeed")
+    if (e.target.matches("#PokemonApiWeb")){
+        cambioBodyHtml(objetoWeb.pokemonApi)
+
+        pokemonName = document.getElementById("pokemonIDname")
+        imagenpk = document.getElementById("pokemonImg")
+        imagenpkHolder = document.getElementById("pokemonImg-placeholder")
+        nombre =  document.getElementById("pokemonName")
+        id =  document.getElementById("pokemonId")
+        alto = document.getElementById("pokemonHeight")
+        peso =  document.getElementById("pokemonWeight")
+        tipo1 = document.getElementById("pokemonTipe1")
+        tipo2 = document.getElementById("pokemonTipe2")
+        pokeHp = document.getElementById("pokemonHP")
+        pokeAtk = document.getElementById("pokemonAtk")
+        pokeDef = document.getElementById("pokemonDef")
+        PokeSAtk = document.getElementById("pokemonSAtk")
+        pokeSDef = document.getElementById("pokemonSDef")
+        pokeSpeed = document.getElementById("pokemonSpeed")
+
+    }
+
+    if (e.target.matches("#pokemonButton")){
+        buscarPokemon()
+    }
+
+
+    if (e.target.matches('#resultadoBusqueda li')){
+
+        document.querySelector("#pokemonIDname").value = e.target.textContent
+        document.querySelector("#resultadoBusqueda").innerHTML = ""
+        buscarPokemon();
+    }
+
+    
+
+}) 
+
+
+
+
 
 // Definicion de variable, array de nombres de pokemon para el buscador
-let pokemonName = document.getElementById("pokemonIDname");
+
 
 let pokemonsNamesArray = [];
 
-check("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
+check("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0", true)
     .then(data => {
         data.results.forEach(item => 
             pokemonsNamesArray.push(item.name)
@@ -38,18 +82,18 @@ check("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
 
 
         
-// Definicion del imput y del buscador automatico 
+// buscador automatico 
 
-let pokemonResultado = document.querySelector('#resultadoBusqueda')
 
-pokemonName.addEventListener("keyup", (e)=> {
-    pokemonResultado.innerHTML = ""
+doc.addEventListener("keyup", (e) =>{
+    if (e.target.matches("#pokemonIDname")){
+    document.querySelector('#resultadoBusqueda').innerHTML = ""
     let resultadosNombres = []
-    if(pokemonName.value === ""){
+    if(e.target.value === ""){
         return 
     } 
     for (let name of pokemonsNamesArray){
-        if (name.toLowerCase().indexOf(pokemonName.value.toLowerCase()) > -1){
+        if (name.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1){
             resultadosNombres.push(name)
         }
     };
@@ -57,26 +101,25 @@ pokemonName.addEventListener("keyup", (e)=> {
         if(resultadosNombres[i] === undefined){
             return 
         } 
-        if (pokemonName.value === resultadosNombres[i]){
+        if (e.target.value === resultadosNombres[i]){
             return
         }
-        pokemonResultado.innerHTML += `<li>${resultadosNombres[i]}</li>`
+        document.querySelector('#resultadoBusqueda').innerHTML += `<li>${resultadosNombres[i]}</li>`
     };
-})
-
-//Evento de click del buscador
-
-pokemonResultado.addEventListener("click", (e) => {
-    pokemonName.value = e.target.innerHTML
-    pokemonResultado.innerHTML = ""
-    buscarPokemon();
+    }
 })
 
 
-// Funcion Buscadora
+// //Evento de click del buscador
+
+// pokemonResultado.addEventListener("click", (e) => {
+
+// })
+
+
+// // Funcion Buscadora
 
 const buscarPokemon = () => {
-
     
     let name = pokemonName.value || "pikachu";
     let api_url =  "https://pokeapi.co/api/v2/pokemon/"
@@ -85,7 +128,7 @@ const buscarPokemon = () => {
     imagenpk.style.display = "none";
     imagenpkHolder.style.display = "inline";
     
-    check(fullUrl)
+    check(fullUrl, true)
     .then(data => {
         
         
@@ -123,9 +166,7 @@ const buscarPokemon = () => {
         
 }
 
- // ejecucion de la funcion buscadora en el boton
 
-buttonPokemon.onclick = () => {
-  buscarPokemon();
-}
+
+
 

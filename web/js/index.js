@@ -1,39 +1,90 @@
 //importacion de variables HTML
-import { proyecto, sobreMi, contacto } from "./Variables_html.js"
+
+import { objetoWeb } from "./objetoWeb.js";
+import {checkApi} from "./checkApi.js"
 
 
 //Declaracion de variables
-// DOM
 
-const indexConstructor = document.querySelector('#autoConstruccion')
+let $footer = document.querySelector("#footer-autoconstructor")
+let $section = document.querySelector("#section-autoconstructor")
+let $header = document.querySelector("#header-autoconstructor")
+let $divScript = document.querySelector("#div-script")
+// pre-carga de variables del nav
+let $proyectoNav;
+let $sobreMiNav;
+let $contactoNav;
 
 
-// HTML NAV 
-const proyectoNav = document.querySelector("#proyectoNav")
-const sobreMiNav = document.querySelector("#sobreMiNav")
-const contactoNav = document.querySelector("#contactoNav")
+
+// Carga inicial de la pagina  
+
+//CARGA DEL HEADER
+checkApi("../header.html")
+.then(data =>  {
+    objetoWeb.header = data
+    $header.innerHTML = objetoWeb.header
+    $sobreMiNav = document.querySelector("#sobreMiNav")
+    $proyectoNav = document.querySelector("#proyectoNav")
+    $contactoNav = document.querySelector("#contactoNav")
+
+    $proyectoNav.style["font-weight"] = "bold"
+
+    return checkApi("../b-Proyectos.html")
+}) 
+
+
+        //CARGA LA PRIMERA VISTA - PROYECTOS
+.then(data =>{
+    objetoWeb.proyectos = data
+    $section.innerHTML =   objetoWeb.proyectos
+    return checkApi("../footer.html")  
+} )
+
+
+        //CARGA DEL FOOTER
+.then(data =>  {
+    objetoWeb.footer = data
+    $footer.innerHTML = objetoWeb.footer
+})  
 
 
 
-// Body que carga al inicio 
-indexConstructor.innerHTML = proyecto
-proyectoNav.style["font-weight"] = "bold"
+
+
+// indexConstructor.innerHTML = proyecto
 
 //Funcion modificadora del body
-function cambioBodyHtml(pagina, variable) {  
+export const cambioBodyHtml = (pagina, variable = false) => {  
     
-    proyectoNav.style["font-weight"] = "normal"
-    sobreMiNav.style["font-weight"] = "normal"
-    contactoNav.style["font-weight"] = "normal"
+    $proyectoNav.style["font-weight"] = "normal"
+    $sobreMiNav.style["font-weight"] = "normal"
+    $contactoNav.style["font-weight"] = "normal"
   
 
-    indexConstructor.innerHTML = pagina
-    variable.style["font-weight"] = "bold"
+    $section.innerHTML = pagina || "<p> pagina </p>" 
+    if (variable){variable.style["font-weight"] = "bold"}
 
 };
 
 
-proyectoNav.addEventListener("click", () => { cambioBodyHtml(proyecto,proyectoNav)})
-sobreMiNav.addEventListener("click", () => { cambioBodyHtml(sobreMi,sobreMiNav)})
-contactoNav.addEventListener("click", () => { cambioBodyHtml(contacto,contactoNav)})
+// CAMBIOS DEL NAV
+
+export const doc = window.document
+doc.addEventListener("click", (e) => {
+
+    if (e.target.matches("#sobreMiNav")){
+        // scriptApi()
+        cambioBodyHtml(objetoWeb.sobreMi, $sobreMiNav)
+    }
+    if (e.target.matches("#proyectoNav")){
+        // scriptApi()
+        cambioBodyHtml(objetoWeb.proyectos, $proyectoNav)
+    }
+    if (e.target.matches("#contactoNav")){
+        // scriptApi()
+        cambioBodyHtml(objetoWeb.contacto, $contactoNav)
+    }
+
+}) 
 

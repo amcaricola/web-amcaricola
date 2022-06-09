@@ -1,6 +1,11 @@
 /* Section */
 
+#PokemonApiWeb{
+    cursor: pointer;
+}
+
 .pokemonSection{
+    margin: 35px 0 ;
     display: grid;
     justify-content: center;
 }

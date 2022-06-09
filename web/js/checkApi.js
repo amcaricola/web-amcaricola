@@ -1,5 +1,5 @@
 
-export const checkApi = (api) => {
+export const checkApi = (api,external = false) => {
     return new Promise(function(resolve, reject) {
 
         let request  = new XMLHttpRequest();
@@ -7,7 +7,7 @@ export const checkApi = (api) => {
         request.onreadystatechange = () => {
             if (request.readyState === 4 ){
                 if (request.status === 200){
-                    if (api.includes("http")){
+                    if (external){
                         resolve (JSON.parse(request.responseText))
                         return
                     }
