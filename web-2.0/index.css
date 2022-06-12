@@ -1,0 +1,23 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+}
+.about, .blog, footer {
+    background-color: #131416;
+    min-height: 150px;
+    margin: 0px;
+}
+
+.header , .portfolio, .contact  {
+    background-color:  #1c1d24;
+    min-height: 150px;
+    margin: 0;
+}
+
+.header{
+    background-image: url("./img/coding.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
