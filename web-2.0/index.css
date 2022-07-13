@@ -1,23 +1,38 @@
-body{
-    margin: 0px;
-    padding: 0px;
-    display: grid;
-}
-.about, .blog, footer {
-    background-color: #131416;
-    min-height: 150px;
-    margin: 0px;
+body {
+  margin: 0px;
+  padding: 0px;
+  display: grid;
 }
 
-.header , .portfolio, .contact  {
-    background-color:  #1c1d24;
-    min-height: 150px;
-    margin: 0;
+.header,
+.portfolio,
+.contact {
+  background-color: #f9f9ff;
+  min-height: 150px;
+  margin: 0;
+}
+.about,
+.blog,
+footer {
+  min-height: 150px;
+  margin: 0px;
 }
 
-.header{
-    background-image: url("./img/coding.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.header {
+  background-image: url("./img/coding.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* DarkMode Colors */
+
+.dark-1 {
+  color: whitesmoke;
+  background-color: #1c1d24;
+}
+
+.dark-2 {
+  color: whitesmoke;
+  background-color: #131416;
 }
