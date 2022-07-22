@@ -7,59 +7,81 @@
     <title>Anthony Caricola | Front-End Developer</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
-    <header class="header">
-      <!-- <img src="./img/Coding.jpg" alt="coding" /> -->
-      <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Acerca</a></li>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Contacto</a></li>
-        </ul>
-      </nav>
 
-      <p>header</p>
-      <p>
-        Titulo en grande que diga "Anthony Caricola --> Programador Web, ->
-        desarrollador de aplicaciones
-      </p>
+  <body>
+    <nav>
+      <h1>AMCARICOLA</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Acerca</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <header class="header" id="home">
+      <!-- <img src="./img/Coding.jpg" alt="coding" /> -->
+
+      <h3>Bienvenido!</h3>
+      <h3>Soy Anthony Caricola</h3>
+      <h3 id="changingWord">Programador Web</h3>
     </header>
 
-    <section class="about">
-      <p>about</p>
-      <p>
-        COLOCAR LA MISMA DESCRIPCION QUE SE ENCUENTRA EN LIMKED-IN -- (NOTA
-        PERSONAL, COLOCARLA TAMBIEN EN GITHUB)
-      </p>
-      <ul>
-        <li>nacimineto</li>
-        <li>edad</li>
-        <li>residencia</li>
-        <li>telefono</li>
-        <li>correo - email</li>
-      </ul>
-      <p>Colocar una foto mia al Lado derecho</p>
+    <section class="about" id="about">
+      <div class="block-about">
+        <img src="./img/portrait.jpg" alt="portrait" class="portrait" />
+      </div>
 
-      <ul>
-        <li>conocimientos:</li>
-        <li>html</li>
-        <li>css</li>
-        <li>javascript</li>
-        <li>React js</li>
-        <li>git</li>
-        <li>github</li>
-        <li>wordpress</li>
-      </ul>
-    </section>
+      <div class="block-about">
+        <h2 class="h2-title-about">Anthony Caricola</h2>
+        <h4>Front-End Developer</h4>
+        <p>
+          Desde que comenzo el año 2022 he iniciado estudios de Programacion
+          enfocada como <b>Front-End Developer</b>, Gracias a los estudios en
+          administracion he trabajado por mas de 10 años en el area logistica,
+          esto me ha llevado a entender el pensamiento logico de los
+          procedimientos y procesos que deben ser realizados, y ha sido de gran
+          ayuda para mis estudios en la programacion.
+        </p>
+        <table>
+          <tr>
+            <td class="tableFocus">Nacimiento</td>
+            <td>26 de Mayo de 1992</td>
+            <td class="tableFocus">Edad</td>
+            <td>30 Años</td>
+          </tr>
 
-    <section class="contact">
-      <p>contact</p>
-      <p>
-        de un lado se mostrata la direccion, correos y telefonos, y telefono -
-        (solo WS - COMPRAR LINEA EXTRA)
-      </p>
+          <tr>
+            <td class="tableFocus">Residencia</td>
+            <td>Chile - Santiago RM</td>
+            <td class="tableFocus">Nacionalidad</td>
+            <td>Italiano - Venezolano</td>
+          </tr>
+          <tr>
+            <td class="tableFocus">Telefono</td>
+            <td>+56 9 3300 7554</td>
+            <td class="tableFocus">Email</td>
+            <td>amcaricola@gmail.com</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block-about-full">
+        <h2 class="h2-title-about">Conocimientos:</h2>
+
+        <ul>
+          <li><img src="./img/html.png" alt="html" title="HTML" /></li>
+          <li><img src="./img/css.png" alt="css" title="CSS" /></li>
+          <li><img src="./img/js.png" alt="js" title="JavaScript" /></li>
+          <li><img src="./img/react.png" alt="react" title="React js" /></li>
+          <li><img src="./img/git.png" alt="git" title="Git" /></li>
+          <li><img src="./img/github.png" alt="github" title="GitHub" /></li>
+          <li>
+            <img src="./img/wordpress.png" alt="wordpress" title="Wordpress" />
+          </li>
+        </ul>
+      </div>
     </section>
 
     <div>
@@ -73,7 +95,7 @@
         </p>
       </section>
 
-      <section class="blog">
+      <section class="blog" id="blog">
         <!-- ESTO SERA EN PAGINA EXTERNA -VEREMOS SI ES NECESARIO-  -->
         <p>blog Personal</p>
         <p>
@@ -82,6 +104,14 @@
         </p>
       </section>
     </div>
+
+    <section class="contact" id="Contact">
+      <p>contact</p>
+      <p>
+        de un lado se mostrata la direccion, correos y telefonos, y telefono -
+        (solo WS - COMPRAR LINEA EXTRA)
+      </p>
+    </section>
 
     <footer class="footer">
       <p>footer</p>
