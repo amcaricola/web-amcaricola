@@ -5,30 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anthony Caricola | Front-End Developer</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body>
-    <nav>
-      <h1>AMCARICOLA</h1>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Acerca</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
+    <section data-scroll-spy class="header" id="inicio">
+      <nav>
+        <h1>AMCARICOLA</h1>
+        <ul>
+          <li><a data-scroll-spy href="#inicio">Inicio</a></li>
+          <li><a data-scroll-spy href="#about">Acerca</a></li>
+          <li><a data-scroll-spy href="#portfolio">Portfolio</a></li>
+          <li><a data-scroll-spy href="#blog">Blog</a></li>
+          <li><a data-scroll-spy href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
 
-    <header class="header" id="home">
       <!-- <img src="./img/Coding.jpg" alt="coding" /> -->
 
       <h3>Bienvenido!</h3>
       <h3>Soy Anthony Caricola</h3>
-      <h3 id="changingWord">Programador Web</h3>
-    </header>
+      <h3 id="changingWords">- Programador Web</h3>
+    </section>
 
-    <section class="about" id="about">
+    <section data-scroll-spy class="about" id="about">
       <div class="block-about">
         <img src="./img/portrait.jpg" alt="portrait" class="portrait" />
       </div>
@@ -86,7 +86,7 @@
 
     <div>
       <!-- ESTO ESTARA SEPARADO Y EN UNA PAGINA DIFERENTE (EN TEORIA SE DEBERIA HACER UN FETCH) -->
-      <section class="portfolio">
+      <section data-scroll-spy id="portfolio" class="portfolio">
         <!-- ESTO SERA EN PAGINA EXTERNA -->
         <p>portfolio</p>
         <p>
@@ -95,7 +95,7 @@
         </p>
       </section>
 
-      <section class="blog" id="blog">
+      <section data-scroll-spy class="blog" id="blog">
         <!-- ESTO SERA EN PAGINA EXTERNA -VEREMOS SI ES NECESARIO-  -->
         <p>blog Personal</p>
         <p>
@@ -105,7 +105,7 @@
       </section>
     </div>
 
-    <section class="contact" id="Contact">
+    <section data-scroll-spy class="contact" id="contact">
       <p>contact</p>
       <p>
         de un lado se mostrata la direccion, correos y telefonos, y telefono -
@@ -124,5 +124,7 @@
         github, linkedin)
       </p>
     </footer>
+
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>

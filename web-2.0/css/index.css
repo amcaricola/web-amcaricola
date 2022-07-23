@@ -1,3 +1,9 @@
+:root {
+  --white: #fdfffc; /*bg color */
+  --darkblue: #333745; /*complementary color */
+  --yellow: #f2a541; /*dark color */
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,17 +17,12 @@ body {
 
 .header,
 .portfolio,
-.contact {
-  background-color: #f9f9ff;
-  min-height: 150px;
-  margin: 0;
-}
+.contact,
 .about,
 .blog,
 footer {
-  background-color: whitesmoke;
   min-height: 150px;
-  margin: 0px;
+  margin: 0;
 }
 
 /* NAVBAR */
@@ -31,16 +32,21 @@ nav {
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: #f9f9ff;
   height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10vw 0 10vw;
-  border-bottom: gainsboro thin solid;
+  transition: all 0.3s ease;
 }
+
+.nav-active {
+  background-color: var(--darkblue);
+  box-shadow: 0 0 15px var(--darkblue);
+}
+
 nav h1 {
-  color: #1c1d24;
+  color: var(--white);
   padding: 1vw;
   font-size: 25px;
 }
@@ -52,24 +58,29 @@ nav ul {
 }
 
 li a {
-  color: #1c1d24;
+  color: var(--white);
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
   padding: 15px;
+  transition: all 0.5s ease;
+}
+
+.link-Active {
+  color: var(--yellow);
 }
 
 /* HEADER */
 
 .header {
-  background-image: url("./img/coding.jpg");
+  height: 100vh;
+  background-image: url("../img/coding.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 10vh;
 }
 
 .header h3 {
@@ -79,8 +90,8 @@ li a {
   margin: 10px;
 }
 
-#changingWord {
-  color: #e2dcc8;
+#changingWords {
+  color: var(--yellow);
 }
 
 /* ABOUT */
@@ -96,8 +107,8 @@ li a {
   align-self: center;
   height: auto;
   max-width: 70%;
-  box-shadow: -15px -15px #e2dcc8;
-  border: solid thin gainsboro;
+  box-shadow: -15px -15px var(--yellow);
+  border: solid thin var(--darkblue);
 }
 
 .block-about {
@@ -120,12 +131,12 @@ li a {
 
 .block-about h4 {
   margin: 0;
-  color: #e2dcc8;
+  color: var(--yellow);
 }
 
 .tableFocus {
   font-weight: bold;
-  border-right: thin solid #e2dcc8;
+  border-right: thin solid var(--yellow);
 }
 
 table {
@@ -139,7 +150,8 @@ table tr td {
 .block-about-full {
   padding: 25px 0;
   display: block;
-  background-color: #e2dcc8;
+  background-color: var(--darkblue);
+  color: var(--white);
   width: 100vw;
   text-align: center;
 }
