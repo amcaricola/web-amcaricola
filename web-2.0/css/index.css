@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,16 +29,18 @@ footer {
 /* NAVBAR */
 
 nav {
+  margin: 0;
   box-sizing: border-box;
   position: fixed;
   top: 0;
+  padding: 0 20px;
   width: 100vw;
   height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10vw 0 10vw;
-  transition: all 0.3s ease;
+  z-index: 1000;
+  transition: background 0.3s ease;
 }
 
 .nav-active {
@@ -51,7 +54,11 @@ nav h1 {
   font-size: 25px;
 }
 
-nav ul {
+.menu-button {
+  display: none;
+}
+
+nav div ul {
   margin: 0;
   display: flex;
   list-style: none;
@@ -87,7 +94,7 @@ li a {
   color: white;
   padding: 0 10vw;
   font-size: 70px;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 #changingWords {
@@ -167,14 +174,61 @@ table tr td {
   height: auto;
 }
 
-/* DarkMode Colors */
+/* responsive Side */
 
-.dark-1 {
-  color: whitesmoke;
-  background-color: #1c1d24;
-}
+@media (max-width: 1023px) {
+  /* NAVEGACION MENU */
 
-.dark-2 {
-  color: whitesmoke;
-  background-color: #131416;
+  .menu-button {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    height: 90vh;
+    width: 50vw;
+    background-color: var(--darkblue);
+    z-index: 990;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menu ul li {
+    padding: 15px 0;
+  }
+
+  .menu ul li a {
+    font-size: 2rem;
+  }
+
+  /* HEADER */
+
+  .header h3 {
+    font-size: 32px;
+  }
+
+  /* ABOUT media query */
+
+  .about {
+    display: none;
+  }
 }

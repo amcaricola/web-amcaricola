@@ -6,19 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anthony Caricola | Front-End Developer</title>
     <link rel="stylesheet" href="./css/index.css" />
+    <link href="./css/hamburgers.css" rel="stylesheet" />
   </head>
 
   <body>
     <section data-scroll-spy class="header" id="inicio">
       <nav>
         <h1>AMCARICOLA</h1>
-        <ul>
-          <li><a data-scroll-spy href="#inicio">Inicio</a></li>
-          <li><a data-scroll-spy href="#about">Acerca</a></li>
-          <li><a data-scroll-spy href="#portfolio">Portfolio</a></li>
-          <li><a data-scroll-spy href="#blog">Blog</a></li>
-          <li><a data-scroll-spy href="#contact">Contacto</a></li>
-        </ul>
+        <div class="menu">
+          <ul>
+            <li><a data-scroll-spy href="#inicio">Inicio</a></li>
+            <li><a data-scroll-spy href="#about">Acerca</a></li>
+            <li><a data-scroll-spy href="#portfolio">Portfolio</a></li>
+            <li><a data-scroll-spy href="#blog">Blog</a></li>
+            <li><a data-scroll-spy href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="menu-button">
+          <button
+            data-nav-button
+            class="hamburger hamburger--spin"
+            type="button"
+          >
+            <span data-nav-button class="hamburger-box">
+              <span data-nav-button class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
       </nav>
 
       <!-- <img src="./img/Coding.jpg" alt="coding" /> -->
