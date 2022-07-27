@@ -35,8 +35,6 @@
         </div>
       </nav>
 
-      <!-- <img src="./img/Coding.jpg" alt="coding" /> -->
-
       <h3>Bienvenido!</h3>
       <h3>Soy Anthony Caricola</h3>
       <h3 id="changingWords">- Programador Web</h3>
@@ -62,6 +60,8 @@
           <tr>
             <td class="tableFocus">Nacimiento</td>
             <td>26 de Mayo de 1992</td>
+          </tr>
+          <tr>
             <td class="tableFocus">Edad</td>
             <td>30 Años</td>
           </tr>
@@ -69,12 +69,16 @@
           <tr>
             <td class="tableFocus">Residencia</td>
             <td>Chile - Santiago RM</td>
+          </tr>
+          <tr>
             <td class="tableFocus">Nacionalidad</td>
             <td>Italiano - Venezolano</td>
           </tr>
           <tr>
             <td class="tableFocus">Telefono</td>
             <td>+56 9 3300 7554</td>
+          </tr>
+          <tr>
             <td class="tableFocus">Email</td>
             <td>amcaricola@gmail.com</td>
           </tr>
@@ -82,31 +86,19 @@
       </div>
 
       <div class="block-about-full">
-        <h2 class="h2-title-about">Conocimientos:</h2>
+        <h2 class="h2-title">Conocimientos:</h2>
 
-        <ul>
-          <li><img src="./img/html.png" alt="html" title="HTML" /></li>
-          <li><img src="./img/css.png" alt="css" title="CSS" /></li>
-          <li><img src="./img/js.png" alt="js" title="JavaScript" /></li>
-          <li><img src="./img/react.png" alt="react" title="React js" /></li>
-          <li><img src="./img/git.png" alt="git" title="Git" /></li>
-          <li><img src="./img/github.png" alt="github" title="GitHub" /></li>
-          <li>
-            <img src="./img/wordpress.png" alt="wordpress" title="Wordpress" />
-          </li>
-        </ul>
+        <!-- Esto carga dinamicamente del archivo Conocimientos.js -->
+        <ul id="conocimientos"></ul>
       </div>
     </section>
 
     <div>
-      <!-- ESTO ESTARA SEPARADO Y EN UNA PAGINA DIFERENTE (EN TEORIA SE DEBERIA HACER UN FETCH) -->
       <section data-scroll-spy id="portfolio" class="portfolio">
-        <!-- ESTO SERA EN PAGINA EXTERNA -->
-        <p>portfolio</p>
-        <p>
-          Tomar la idea de como esta hecho en la pagina de jonmircha
-          (https://jonmircha.com/cv#experiencia-profesional)
-        </p>
+        <h2 class="h2-title">portfolio</h2>
+
+        <!-- Esto carga dinamicamente del archivo Portfolio.js -->
+        <div id="card-portafolio-folder"></div>
       </section>
 
       <section data-scroll-spy class="blog" id="blog">

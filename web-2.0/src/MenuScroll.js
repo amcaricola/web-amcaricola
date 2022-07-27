@@ -18,7 +18,7 @@ export default function MenuScroll() {
   };
 
   const observer = new IntersectionObserver(intercepted, {
-    threshold: [0.5, 0.75],
+    threshold: [0.5, 0.65],
   });
 
   $sections.forEach((el) => observer.observe(el));
@@ -26,6 +26,11 @@ export default function MenuScroll() {
 
 export function MenuBgAppear() {
   let $nav = d.querySelector("nav");
+
+  if (window.pageYOffset > 100) {
+    if ($nav.classList.value == "nav-active") return;
+    $nav.classList.add("nav-active");
+  }
 
   if (window.outerWidth < 1024) $nav.style.backgroundColor = "var(--darkblue)";
 
