@@ -7,7 +7,6 @@ let conocimientos = [
   { title: "React", img: "./img/conocimientos/react.png" },
   { title: "Git", img: "./img/conocimientos/git.png" },
   { title: "Github", img: "./img/conocimientos/github.png" },
-  { title: "Wordpress", img: "./img/conocimientos/wordpress.png" },
 ];
 
 export default function Conocimientos() {
@@ -25,7 +24,7 @@ export default function Conocimientos() {
 function EachItemDo({ title, img }) {
   return `
     <li>
-      <img src=${img} alt=${title} title=${title} />
+      <img loading="lazy" src=${img} alt=${title} title=${title} />
     </li>
 `;
 }

@@ -16,13 +16,18 @@ body {
   display: grid;
 }
 
+html,
+body {
+  width: 100% !important;
+  overflow-x: hidden !important;
+}
+
 .header,
 .portfolio,
 .contact,
 .about,
 .blog,
 footer {
-  min-height: 150px;
   margin: 0;
 }
 
@@ -38,7 +43,7 @@ nav {
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  padding: 0 20px;
+  padding: 0 80px;
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -86,6 +91,7 @@ li a {
 /* HEADER */
 
 .header {
+  position: relative;
   height: 100vh;
   background-image: url("../img/coding.jpg");
   background-repeat: no-repeat;
@@ -105,6 +111,35 @@ li a {
 
 #changingWords {
   color: var(--yellow);
+}
+
+.rrss-header {
+  position: absolute;
+  right: 100px;
+  bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rrss-header h4 {
+  color: var(--white);
+  font-size: 2rem;
+  margin: 0;
+  padding: 10px;
+}
+
+.rrss-header div a img {
+  filter: drop-shadow(0 0 5px var(--darkblue));
+  height: 55px;
+  width: 55px;
+  padding: 0 10px;
+}
+
+.rrss-header div a img:hover {
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(0 0 10px var(--yellow));
 }
 
 /* ABOUT */
@@ -193,10 +228,12 @@ table tr td {
 .portfolio {
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 20px 0 50px 0;
 }
 
 .card-portafolio {
+  text-decoration: none;
+  color: #000;
   text-align: justify;
   margin-left: auto;
   margin-right: auto;
@@ -215,13 +252,16 @@ table tr td {
 }
 
 .card-portafolio img {
+  flex-basis: 20%;
   max-width: 100px;
   width: 10vh;
   height: fit-content;
-  margin: 16px 0;
+  margin: auto;
+  padding: 15px;
 }
 
 .card-portafolio div {
+  flex-basis: 80%;
   padding: 0 25px;
 }
 
@@ -237,12 +277,55 @@ table tr td {
   margin: 0 0 16px 0;
 }
 
+/* FOOTER */
+
+footer {
+  background-color: var(--darkblue);
+  height: 75px;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+footer div {
+  width: 35vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer div a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+footer div a:hover {
+  transition: all 0.3s ease-in-out;
+  color: var(--yellow);
+}
+
 /* 
 ------responsive Side------ 
 */
 
 @media (max-width: 1023px) {
   /* NAVEGACION MENU media query */
+
+  nav {
+    padding: 0 30px;
+  }
+
+  .rrss-header {
+    left: 0;
+    right: 0;
+
+    bottom: 35px;
+  }
+
+  .rrss-header h4 {
+    display: none;
+  }
 
   .menu-button {
     display: block;
@@ -288,7 +371,7 @@ table tr td {
   /* HEADER  media query*/
 
   .header h3 {
-    font-size: 32px;
+    font-size: 48px;
   }
 
   /* ABOUT media query */
@@ -316,7 +399,8 @@ table tr td {
   /* PORTFOLIO media query */
 
   .card-portafolio {
-    width: 80vw;
+    width: 85vw;
+    min-height: 250px;
     /* flex-direction: column; */
   }
 
@@ -327,8 +411,23 @@ table tr td {
 
 /* SOME MORE MEDIA IN SMALL SCREEN */
 
-@media (max-width: 799px) {
+@media (max-width: 600px) {
   .card-portafolio {
     flex-direction: column;
+  }
+
+  .header h3 {
+    font-size: 30px;
+  }
+  footer {
+    justify-content: center;
+  }
+
+  footer > p {
+    display: none;
+  }
+
+  footer div {
+    width: 70vw;
   }
 }

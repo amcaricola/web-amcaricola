@@ -13,15 +13,15 @@ function Portfolio() {
   $portfolio.innerHTML = data;
 }
 
-function EachItemDo({ title, img, year, description }) {
+function EachItemDo({ title, alt, img, link, year, description }) {
   return `
-  <div class="card-portafolio">
-  <img src=${img} alt=${title} />
+  <a href=${link} class="card-portafolio" target="_blank" rel="noopener">
+  <img loading="lazy" src=${img} alt=${alt} />
   <div>
-    <h3>${title} <small>(${year})</small></h3>
+    <h3> ${title} <small>(${year})</small></h3>
     <p>${description}</p>
   </div>
-</div>
+</a>
   `;
 }
 
@@ -29,32 +29,31 @@ function EachItemDo({ title, img, year, description }) {
 
 const portfolio = [
   {
-    img: "./img/portfolio/html.png",
     title: "Servicio Tecnico SLM",
+    alt: "Servicio-Tecnico-SLM",
+    img: "../img/portfolio/slm.jpg",
+    link: "https://slm.up.railway.app/",
     year: 2022,
     description:
-      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis dolore labore architecto atque ex et sed tempore! Aperiam nulla labore, consequatur cumque animi culpa magni. Aliquam laudantium qui magni.",
+      "SPA realizada para solventar la necesidad del control y registro del servicio técnico de la empresa Sobre la Mesa, cuenta con API personalizada (HTML - CSS - React) ",
   },
   {
-    img: "./img/portfolio/html.png",
     title: "Pokedex App",
+    alt: "Pokedex-App",
+    img: "../img/portfolio/pokemon.jpg",
+    link: "https://amcaricola.com/POKEMON/pokedex.html",
     year: 2022,
     description:
-      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis dolore labore architecto atque ex et sed tempore! Aperiam nulla labore, consequatur cumque animi culpa magni. Aliquam laudantium qui magni.",
+      "Aplicación realizada como práctica de peticiones a API, en este proyecto se realizó la petición a la API de Pokémon para realizar un Pokedex con búsqueda inteligente. (HTML - CSS - JavaScript)",
   },
   {
-    img: "./img/portfolio/html.png",
-    title: "griznie.cl",
-    year: 2021,
-    description:
-      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis dolore labore architecto atque ex et sed tempore! Aperiam nulla labore, consequatur cumque animi culpa magni. Aliquam laudantium qui magni.",
-  },
-  {
-    img: "./img/portfolio/html.png",
     title: "ArriendaAhora.cl",
+    alt: "ArriendaAhora-cl",
+    img: "../img/portfolio/arriendaAhora.png",
+    link: "https://arriendaahora.cl/",
     year: 2021,
     description:
-      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis dolore labore architecto atque ex et sed tempore! Aperiam nulla labore, consequatur cumque animi culpa magni. Aliquam laudantium qui magni.",
+      "Diseñada para PYME ArriendaAhora.cl en Chile que trabaja con compra, venta y arriendo, la web se encarga de mostrar el catálogo de inmuebles disponibles (WordPress - CSS)",
   },
 ];
 

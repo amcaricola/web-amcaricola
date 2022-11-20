@@ -32,10 +32,10 @@ export function MenuBgAppear() {
     $nav.classList.add("nav-active");
   }
 
-  if (window.outerWidth < 1024) $nav.style.backgroundColor = "var(--darkblue)";
+  if (window.innerWidth < 1024) $nav.style.backgroundColor = "var(--darkblue)";
 
   addEventListener("resize", (e) => {
-    if (window.outerWidth < 1024) {
+    if (window.innerWidth < 1024) {
       $nav.style.backgroundColor = "var(--darkblue)";
     } else {
       $nav.style.backgroundColor = "";

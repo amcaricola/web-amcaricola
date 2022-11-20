@@ -1,86 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/pokemonApi.css" />
+    <script type="module" src="./js/pokeApi.js"></script>
+  </head>
+  <body>
+    <div>
+      <h3>Definicio:</h3>
+      <p>En esta seccion estara una especie de "pokedex"</p>
+      <p>Esta mostrara el trabajo y practica que se ha hace con APIs</p>
+      <p>
+        Si deseas ver el codigo, puedes ingresar a mi
+        <a href="https://github.com/amcaricola/web-amcaricola">Repositorio</a>
+        de GitHub
+      </p>
+      <p>
+        La API usada es: <a href="https://pokeapi.co/">https://pokeapi.co/</a>
+      </p>
+    </div>
 
-
-<div>
-    <h3>Definicio:</h3>
-    <p>En esta seccion estara una especie de "pokedex" </p>
-    <p>Esta mostrara el trabajo y practica que se ha hace con APIs</p>
-    <p>Si deseas ver el codigo, puedes ingresar a mi <a href="https://github.com/amcaricola/web-amcaricola">Repositorio</a> de GitHub </p>
-    <p>La API usada es: <a href="https://pokeapi.co/">https://pokeapi.co/</a>  </p>
-</div>
-
-    
-<div class="pokemonSection">
-
-    <article>
+    <div class="pokemonSection">
+      <article>
         <h3>Busca tu pokemon!</h3>
         <form>
-            <label for="pokemonIDname">Escribe el nombre del pokemon que deseas buscar: </label>
-            <input type="text" id="pokemonIDname" autocomplete="off">
+          <label for="pokemonIDname"
+            >Escribe el nombre del pokemon que deseas buscar:
+          </label>
+          <input type="text" id="pokemonIDname" autocomplete="off" />
 
-            <!-- este UL funciona como autocompletador del buscador -->
-            <ul id="resultadoBusqueda" class="autocompletar">
-            </ul>
+          <!-- este UL funciona como autocompletador del buscador -->
+          <ul id="resultadoBusqueda" class="autocompletar"></ul>
 
+          <button type="button" id="pokemonButton">Activar Pokedex!</button>
 
-            <button type="button" id="pokemonButton">Activar Pokedex!</button>
-
-            <!-- Infomacion de pokemons -->
-        </form >
+          <!-- Infomacion de pokemons -->
+        </form>
         <div class="pokemonImgDiv">
-            <img id="pokemonImg" class="pokemonImg" src="./img/pokeball.png" alt="imagen del pokemon">
-            <img id="pokemonImg-placeholder" class="pokemonImg-placeholder" src="./img/loading_pokemon.gif" alt="imagen del pokemon">
+          <img
+            id="pokemonImg"
+            class="pokemonImg"
+            src="./img/pokeball.png"
+            alt="imagen del pokemon"
+          />
+          <img
+            id="pokemonImg-placeholder"
+            class="pokemonImg-placeholder"
+            src="./img/loading_pokemon.gif"
+            alt="imagen del pokemon"
+          />
         </div>
         <div>
-            <h2>Detalles:</h2>
-            <div class="pokemonDiv">
-                <h4>Nombre:</h4> <p id="pokemonName">Aun no recibido</p>
-            </div>
-            <div class="pokemonDiv">
-                <h4>ID Global:</h4> <p id="pokemonId">Aun no recibido</p>
-            </div>
-            <div class="pokemonDiv">
-                <h4>Alto:</h4> <p id="pokemonHeight">Aun no recibido</p>
-            </div>
-            <div class="pokemonDiv">
-                <h4>Peso:</h4> <p id="pokemonWeight">Aun no recibido</p>
-            </div>
-            <div class="pokemonDiv">
-                <h4>Tipo:</h4> 
-                <p id="pokemonTipe1">Aun no recibido</p> 
-                <p id="pokemonTipe2"> </p>
-            </div>
-            <h2>Stats</h2>
+          <h2>Detalles:</h2>
+          <div class="pokemonDiv">
+            <h4>Nombre:</h4>
+            <p id="pokemonName">Aun no recibido</p>
+          </div>
+          <div class="pokemonDiv">
+            <h4>ID Global:</h4>
+            <p id="pokemonId">Aun no recibido</p>
+          </div>
+          <div class="pokemonDiv">
+            <h4>Alto:</h4>
+            <p id="pokemonHeight">Aun no recibido</p>
+          </div>
+          <div class="pokemonDiv">
+            <h4>Peso:</h4>
+            <p id="pokemonWeight">Aun no recibido</p>
+          </div>
+          <div class="pokemonDiv">
+            <h4>Tipo:</h4>
+            <p id="pokemonTipe1">Aun no recibido</p>
+            <p id="pokemonTipe2"></p>
+          </div>
+          <h2>Stats</h2>
 
-            <table class="pokemonTabla">
-                <tr>
-                    <th>HP </th>
-                    <td id="pokemonHP">no asignado</td>
-                </tr>
-                <tr>
-                    <th>Ataque </th>
-                    <td id="pokemonAtk">no asignado</td>
-                </tr>
-                <tr>
-                    <th>Defensa </th>
-                    <td id="pokemonDef">no asignado</td>
-                </tr>
-                <tr>
-                    <th>Ataque especial </th>
-                    <td id="pokemonSAtk">no asignado</td>
-                </tr>
-                <tr>
-                    <th>Defensa especial </th>
-                    <td id="pokemonSDef">no asignado</td>
-                </tr>
-                <tr>
-                    <th>Velocidad </th>
-                    <td id="pokemonSpeed">no asignado</td>
-                </tr>
-            </table>
-
+          <table class="pokemonTabla">
+            <tr>
+              <th>HP</th>
+              <td id="pokemonHP">no asignado</td>
+            </tr>
+            <tr>
+              <th>Ataque</th>
+              <td id="pokemonAtk">no asignado</td>
+            </tr>
+            <tr>
+              <th>Defensa</th>
+              <td id="pokemonDef">no asignado</td>
+            </tr>
+            <tr>
+              <th>Ataque especial</th>
+              <td id="pokemonSAtk">no asignado</td>
+            </tr>
+            <tr>
+              <th>Defensa especial</th>
+              <td id="pokemonSDef">no asignado</td>
+            </tr>
+            <tr>
+              <th>Velocidad</th>
+              <td id="pokemonSpeed">no asignado</td>
+            </tr>
+          </table>
         </div>
+      </article>
+      <script id="scriptPokemon"></script>
+    </div>
+  </body>
+</html>
 
-    </article>
-    <script id="scriptPokemon"></script>
-</div>
-
+<!--  -->

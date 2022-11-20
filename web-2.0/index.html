@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anthony Caricola | Front-End Developer</title>
+    <script type="module" src="./src/index.js"></script>
+
     <link rel="stylesheet" href="./css/index.css" />
     <link href="./css/hamburgers.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
   </head>
 
   <body>
+    <!-- HEADER -->
     <section data-scroll-spy class="header" id="inicio">
       <nav>
         <h1>AMCARICOLA</h1>
@@ -18,8 +22,7 @@
             <li><a data-scroll-spy href="#inicio">Inicio</a></li>
             <li><a data-scroll-spy href="#about">Acerca</a></li>
             <li><a data-scroll-spy href="#portfolio">Portfolio</a></li>
-            <li><a data-scroll-spy href="#blog">Blog</a></li>
-            <li><a data-scroll-spy href="#contact">Contacto</a></li>
+            <!-- <li><a data-scroll-spy href="#blog">Blog</a></li> -->
           </ul>
         </div>
         <div class="menu-button">
@@ -38,8 +41,30 @@
       <h3>Bienvenido!</h3>
       <h3>Soy Anthony Caricola</h3>
       <h3 id="changingWords">- Programador Web</h3>
+
+      <div class="rrss-header">
+        <h4>Contactame!</h4>
+        <div>
+          <a
+            href="https://www.linkedin.com/in/anthony-caricola/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./img/linkedin.png" alt="link a linkedin"
+          /></a>
+
+          <a
+            href="https://github.com/amcaricola"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./img/conocimientos/github.png" alt="link a github"
+          /></a>
+        </div>
+      </div>
     </section>
 
+    <!-- SECCION ABOUT -->
     <section data-scroll-spy class="about" id="about">
       <div class="block-about">
         <img src="./img/portrait.jpg" alt="portrait" class="portrait" />
@@ -48,18 +73,19 @@
       <div class="block-about">
         <h2 class="h2-title-about">Anthony Caricola</h2>
         <h4>Front-End Developer</h4>
+
         <p>
-          Desde que comenzo el año 2022 he iniciado estudios de Programacion
+          Desde que comenzó el año 2022 he iniciado estudios de Programación
           enfocada como <b>Front-End Developer</b>, Gracias a los estudios en
-          administracion he trabajado por mas de 10 años en el area logistica,
-          esto me ha llevado a entender el pensamiento logico de los
+          administración he trabajado por más de 10 años en el área logística,
+          esto me ha llevado a entender el pensamiento lógico de los
           procedimientos y procesos que deben ser realizados, y ha sido de gran
-          ayuda para mis estudios en la programacion.
+          ayuda para mis estudios en la programación.
         </p>
         <table>
           <tr>
             <td class="tableFocus">Nacimiento</td>
-            <td>26 de Mayo de 1992</td>
+            <td>26 de mayo de 1992</td>
           </tr>
           <tr>
             <td class="tableFocus">Edad</td>
@@ -75,7 +101,7 @@
             <td>Italiano - Venezolano</td>
           </tr>
           <tr>
-            <td class="tableFocus">Telefono</td>
+            <td class="tableFocus">Teléfono</td>
             <td>+56 9 3300 7554</td>
           </tr>
           <tr>
@@ -93,44 +119,44 @@
       </div>
     </section>
 
-    <div>
-      <section data-scroll-spy id="portfolio" class="portfolio">
-        <h2 class="h2-title">portfolio</h2>
+    <section data-scroll-spy id="portfolio" class="portfolio">
+      <h2 class="h2-title">Portfolio</h2>
 
-        <!-- Esto carga dinamicamente del archivo Portfolio.js -->
-        <div id="card-portafolio-folder"></div>
-      </section>
-
-      <section data-scroll-spy class="blog" id="blog">
-        <!-- ESTO SERA EN PAGINA EXTERNA -VEREMOS SI ES NECESARIO-  -->
-        <p>blog Personal</p>
-        <p>
-          En este blog solo se mostraran los 3 ultipos POST del blog, y tendra
-          un link para ir al blog completo
-        </p>
-      </section>
-    </div>
-
-    <section data-scroll-spy class="contact" id="contact">
-      <p>contact</p>
-      <p>
-        de un lado se mostrata la direccion, correos y telefonos, y telefono -
-        (solo WS - COMPRAR LINEA EXTRA)
-      </p>
+      <!-- Esto carga dinamicamente del archivo Portfolio.js -->
+      <div id="card-portafolio-folder"></div>
     </section>
 
-    <footer class="footer">
-      <p>footer</p>
+    <!-- <section data-scroll-spy class="blog" id="blog">
+      ESTO SERA EN PAGINA EXTERNA -VEREMOS SI ES NECESARIO- 
+      <p>blog Personal</p>
       <p>
-        lado izquierdo -> Web Amcaricola.com desarrollada por Anthony Caricola
-        bajo la licencia MIT.
+        En este blog solo se mostraran los 3 ultipos POST del blog, y tendra un
+        link para ir al blog completo
       </p>
-      <p>
-        SECCION DE FOLLOW QUE LLEVA A REDES SOCIALES "Sigueme:" (instagram,
-        github, linkedin)
-      </p>
-    </footer>
+    </section> -->
 
-    <script type="module" src="./src/index.js"></script>
+    <footer class="footer">
+      <p>Sígueme en redes sociales para saber más sobre mi:</p>
+      <div>
+        <a
+          href="https://www.linkedin.com/in/anthony-caricola/"
+          target="_blank"
+          rel="noopener"
+        >
+          <p>LinkedIn</p></a
+        >
+
+        <a href="https://github.com/amcaricola/" target="_blank" rel="noopener"
+          ><p>GitHub</p></a
+        >
+
+        <a
+          href="https://www.instagram.com/amcaricola/"
+          target="_blank"
+          rel="noopener"
+          ><p>Instagram</p></a
+        >
+      </div>
+    </footer>
   </body>
 </html>
