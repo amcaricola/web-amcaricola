@@ -1,11 +1,10 @@
 let d = document;
 export default function ChangingWords() {
   let $words = d.querySelector("#changingWords"),
-    word1 = "- Web Developer",
-    word2 = "- Programador Web",
+    word1 = "Web Developer",
+    word2 = "Programador Web",
     transfer = $words.textContent,
-    disminuir,
-    lastword;
+    disminuir;
 
   let number = $words.textContent.length,
     wait = 1500;
@@ -21,7 +20,7 @@ export default function ChangingWords() {
     if (disminuir) {
       number -= 1;
       $words.textContent = transfer.substring(0, number);
-      if (number == 1) {
+      if (number == 0) {
         disminuir = false;
         wait = 400;
         transfer === word1 ? (transfer = word2) : (transfer = word1);

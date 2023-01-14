@@ -109,6 +109,10 @@ li a {
   margin: 10px 0;
 }
 
+.h3-header-changingWords {
+  height: 20px;
+}
+
 #changingWords {
   color: var(--yellow);
 }
@@ -179,6 +183,11 @@ li a {
   color: var(--yellow);
 }
 
+.table-about {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .tableFocus {
   font-weight: bold;
   border-right: thin solid var(--yellow);
@@ -186,7 +195,6 @@ li a {
 
 table {
   text-align: justify;
-  min-width: 30vw;
   margin: 15px 0;
 }
 
@@ -290,7 +298,7 @@ footer {
 }
 
 footer div {
-  width: 35vw;
+  width: 25vw;
   display: flex;
   justify-content: space-evenly;
 }
@@ -301,7 +309,7 @@ footer div a {
 }
 
 footer div a:hover {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: var(--yellow);
 }
 

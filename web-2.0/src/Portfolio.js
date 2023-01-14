@@ -29,13 +29,13 @@ function EachItemDo({ title, alt, img, link, year, description }) {
 
 const portfolio = [
   {
-    title: "Servicio Tecnico SLM",
-    alt: "Servicio-Tecnico-SLM",
+    title: "Registro de Datos de Bodega - SLM",
+    alt: "Registro-de-bodega-SLM",
     img: "../img/portfolio/slm.jpg",
     link: "https://slm.up.railway.app/",
     year: 2022,
     description:
-      "SPA realizada para solventar la necesidad del control y registro del servicio técnico de la empresa Sobre la Mesa, cuenta con API personalizada (HTML - CSS - React) ",
+      "SPA que soluciona la necesidad del control y registro de informacion en procesos de bodega de la empresa SOBRE LA MESA a traves de una API (ReackJS - NodeJS - MERN) ",
   },
   {
     title: "Pokedex App",
@@ -53,7 +53,7 @@ const portfolio = [
     link: "https://arriendaahora.cl/",
     year: 2021,
     description:
-      "Diseñada para PYME ArriendaAhora.cl en Chile que trabaja con compra, venta y arriendo, la web se encarga de mostrar el catálogo de inmuebles disponibles (WordPress - CSS)",
+      "Portal diseñado para ArriendaAhora.cl dedicado a compra, venta y arriendo de inmuebles, la web se encarga de mostrar el catálogo disponible (WordPress - CSS)",
   },
 ];
 
