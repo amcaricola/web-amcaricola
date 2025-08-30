@@ -259,6 +259,23 @@ table tr td {
   background-color: var(--yellow);
 }
 
+.card-name-stack {
+  padding: 0 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-stack {
+  background: burlywood;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: 0 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
 .card-portafolio img {
   flex-basis: 20%;
   max-width: 100px;
@@ -266,6 +283,7 @@ table tr td {
   height: fit-content;
   margin: auto;
   padding: 15px;
+  aspect-ratio: 1/1;
 }
 
 .card-portafolio div {
@@ -422,6 +440,16 @@ footer div a:hover {
 @media (max-width: 600px) {
   .card-portafolio {
     flex-direction: column;
+  }
+
+  .card-name-stack {
+    padding: 0 !important;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .card-stack {
+    margin: 5px 2px;
   }
 
   .header h3 {

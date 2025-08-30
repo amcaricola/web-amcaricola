@@ -1,11 +1,13 @@
-// funcion constructora ---
+// funcion constructora de los portfolios
+import { Portfolio_full as PORTAFOLIO } from "./portafolio_Db.js";
+
 let d = document;
 
 function Portfolio() {
   let data = null,
     $portfolio = d.querySelector("#card-portafolio-folder");
 
-  portfolio.forEach((el) => {
+  PORTAFOLIO.forEach((el) => {
     const itemConocimiento = EachItemDo(el);
     data ? (data += itemConocimiento) : (data = itemConocimiento);
   });
@@ -13,49 +15,63 @@ function Portfolio() {
   $portfolio.innerHTML = data;
 }
 
-function EachItemDo({ title, alt, img, link, year, description }) {
+function EachItemDo(item) {
+  let { title, alt, img, link, year, description, stacks } = item;
+
+  let stackItems = EachStackDo(stacks);
+
   return `
-  <a href=${link} class="card-portafolio" target="_blank" rel="noopener">
+<a href=${link} class="card-portafolio" target="_blank" rel="noopener">
   <img loading="lazy" src=${img} alt=${alt} />
   <div>
+    <div class="card-name-stack">
     <h3> ${title} <small>(${year})</small></h3>
+    <span> 
+      ${stackItems}
+    </span>
+
+    </div>
     <p>${description}</p>
   </div>
 </a>
   `;
 }
 
-// base de datos de los portfolios
+function EachStackDo(stacks) {
+  if (undefined === stacks || null === stacks) return "";
+  let all_stacks = "";
+  stacks.forEach((element) => {
+    let color = "";
+    switch (element) {
+      case "HTML":
+        color = "#E4552E";
+        break;
+      case "CSS":
+        color = "#6B399C";
+        break;
+      case "JAVASCRIPT":
+        color = "#D7BC39";
+        break;
+      case "WORDPRESS":
+        color = "#28799E";
+        break;
+      case "WOOCOMMERCE":
+        color = "#B16195";
+        break;
+      case "REACT":
+        color = "#1BA1CC";
+        break;
+      case "GODOT":
+        color = "#4D90C1";
+        break;
+    }
 
-const portfolio = [
-  {
-    title: "Registro de Datos de Bodega - SLM",
-    alt: "Registro-de-bodega-SLM",
-    img: "../img/portfolio/slm.jpg",
-    link: "https://slm.up.railway.app/",
-    year: 2022,
-    description:
-      "SPA que soluciona la necesidad del control y registro de informacion en procesos de bodega de la empresa SOBRE LA MESA a traves de una API (ReackJS - NodeJS - MERN) ",
-  },
-  {
-    title: "Pokedex App",
-    alt: "Pokedex-App",
-    img: "../img/portfolio/pokemon.jpg",
-    link: "https://amcaricola.com/POKEMON/pokedex.html",
-    year: 2022,
-    description:
-      "Aplicación realizada como práctica de peticiones a API, en este proyecto se realizó la petición a la API de Pokémon para realizar un Pokedex con búsqueda inteligente. (HTML - CSS - JavaScript)",
-  },
-  {
-    title: "ArriendaAhora.cl",
-    alt: "ArriendaAhora-cl",
-    img: "../img/portfolio/arriendaAhora.png",
-    link: "https://arriendaahora.cl/",
-    year: 2021,
-    description:
-      "Portal diseñado para ArriendaAhora.cl dedicado a compra, venta y arriendo de inmuebles, la web se encarga de mostrar el catálogo disponible (WordPress - CSS)",
-  },
-];
+    all_stacks += `<span class="card-stack" style="background-color: ${color};"  > ${element} </span> \n`;
+  });
+  return all_stacks;
+}
+
+// base de datos de los portfolios
 
 //   Export de la funcion
 
