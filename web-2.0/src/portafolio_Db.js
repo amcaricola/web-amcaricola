@@ -57,7 +57,7 @@ const Portfolio_full = [
     alt: "Amcaricola.com",
     img: "./img/portafolio/web-img/amcaricola.png",
     link: "https://github.com/amcaricola/amcaricola-web-3.0",
-    year: 2024,
+    year: 2023,
     description:
       "Web de portafolio - Creado para mostrar y recopilar todos los proyectos y mostrar a clientes mi trabajo - Este enlace lleva al repositorio de Github de esta web.",
     stacks: ["HTML", "CSS", "JAVASCRIPT"],
@@ -77,7 +77,7 @@ const Portfolio_full = [
     alt: "ArriendaAhora.cl",
     img: "./img/portafolio/web-img/arrienda_ahora.png",
     link: "https://arriendaahora.cl/",
-    year: 2021,
+    year: 2022,
     description:
       "Web diseñada para  ArriendaAhora.cl dedicado a compra, venta y arriendo de inmuebles, la web se encarga de mostrar el catálogo disponible",
     stacks: ["WORDPRESS", "CSS", "JAVASCRIPT"],
