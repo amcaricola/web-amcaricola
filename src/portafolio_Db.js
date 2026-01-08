@@ -26,7 +26,7 @@ const Portfolio_full = [
     title: "OCR - Reconocimiento de texto en imágenes",
     alt: "OCR - Reconocimiento de texto en imágenes",
     img: "./img/portafolio/web-img/ocr.png",
-    link: "https://www.amcaricola.com/ocr",
+    link: "https://www.amcaricola.com/OCR",
     year: 2024,
     description:
       "Web de reconocimiento de texto en imagenes con la libreria Tesseract.js realizada por requerimiento de cliente.",
