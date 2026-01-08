@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="htmlstyles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script defer src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMC's Free OCR</title>
+  </head>
+
+  <body>
+    <div id="loaderDiv">
+      <span class="loader"></span>
+    </div>
+
+    <header>
+      <h1>Free OCR</h1>
+      <div><p>¡Convierte tus imágenes a texto en tan solo segundos!</p></div>
+    </header>
+
+    <main>
+      <div class="hide">
+        <input type="file" multiple name="fileToUpload" id="fileToUpload" />
+      </div>
+      <div class="btnspace">
+        <button id="selectBtn">Seleccionar Imágenes</button>
+        <button id="cleanBtn">Limpiar</button>
+        <button id="copyBtn1">Copiar</button>
+      </div>
+      <textarea
+        readonly
+        id="h3text"
+        placeholder="Tu Texto aparecera aqui!"
+      ></textarea>
+    </main>
+
+    <footer>
+      <p>
+        Potenciado con
+        <a href="https://tesseract.projectnaptha.com/">Tesseract.JS</a>
+      </p>
+      <p>Desarrollado por AMCARICOLA</p>
+    </footer>
+    <script defer type="module" src="ToastifyNotification.js"></script>
+    <script defer type="module" src="Worker.js"></script>
+  </body>
+</html>
