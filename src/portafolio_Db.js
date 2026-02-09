@@ -2,6 +2,26 @@
 
 // HTML - CSS - JAVASCRIPT - WORDPRESS - WOOCOMMERCE - REACT - GODOT
 const Portfolio_full = [
+   {
+    title: "A hard time in space",
+    alt: "A hard time in space",
+    img: "https://img.itch.zone/aW1nLzI1NDIyODkwLnBuZw==/315x250%23c/mOT7ZR.png",
+    link: "https://amcaricola.itch.io/a-hard-time-in-space",
+    year: 2025,
+    description:
+      "Un  shooter arcade al estilo shoot em up, donde controlas una nave espacial y debes sobrevivir a oleadas de enemigos infinitos, y te posicionas en el ranking de puntuaciones.",
+    stacks: ["GODOT"],
+  },
+   {
+    title: "Simple fetch tool",
+    alt: "Simple fetch tool",
+    img: "../simple_fetch_tool/simple_fetch_tool.png",
+    link: "https://github.com/amcaricola/simple-fetch-tool-GODOT",
+    year: 2025,
+    description:
+      "Pequeña libreria para Godot Engine que permite hacer peticiones HTTP a una API de manera sencilla y parecida a la API fetch de Javascript",
+    stacks: ["GODOT"],
+  },
   {
     title: "Nooar, the mistery clock",
     alt: "Nooar and the mistery clock",
