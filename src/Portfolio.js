@@ -25,8 +25,8 @@ function EachItemDo(item) {
   <img loading="lazy" src=${img} alt=${alt} />
   <div>
     <div class="card-name-stack">
-    <h3> ${title} <small>(${year})</small></h3>
-    <span> 
+    <h3 class="card-title"> ${title} <small>(${year})</small></h3>
+    <span class="card-stacks-container"> 
       ${stackItems}
     </span>
 
@@ -63,6 +63,9 @@ function EachStackDo(stacks) {
         break;
       case "GODOT":
         color = "#4D90C1";
+        break;
+      case "ASTRO":
+        color = "#131347";
         break;
     }
 

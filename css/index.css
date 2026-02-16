@@ -266,11 +266,18 @@ table tr td {
   align-items: center;
 }
 
+.card-stacks-container{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .card-stack {
   background: burlywood;
   padding: 5px 10px;
   border-radius: 8px;
-  margin: 0 5px;
+  margin: 0px 5px;
   font-size: 0.8rem;
   font-weight: bold;
   color: var(--white);
@@ -449,7 +456,7 @@ footer div a:hover {
   }
 
   .card-stack {
-    margin: 5px 2px;
+    margin: 3px 2px;
   }
 
   .header h3 {

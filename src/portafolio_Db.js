@@ -43,8 +43,8 @@ const Portfolio_full = [
     stacks: ["WORDPRESS", "WOOCOMMERCE", "CSS"],
   },
   {
-    title: "OCR - Reconocimiento de texto en imágenes",
-    alt: "OCR - Reconocimiento de texto en imágenes",
+    title: "OCR - imagenes a texto",
+    alt: "OCR - imagenes a texto",
     img: "./img/portafolio/web-img/ocr.png",
     link: "./OCR",
     year: 2024,
